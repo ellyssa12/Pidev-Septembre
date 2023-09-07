@@ -1,0 +1,20 @@
+{% extends 'FrontOfficeConnecte.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="font-weight-bold">&#x1F506; Ajouter un Cours &#x1F506;</h1>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                {{ form(form) }}
+            </div>
+        </div>
+        
+<div class="text-center mt-4">
+    <a href="javascript:history.go(-1);" class="btn btn-outline-primary">Retour au menu des cours</a>
+</div>
+
+    </div>
+{% endblock %}

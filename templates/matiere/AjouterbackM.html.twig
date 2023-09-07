@@ -1,0 +1,30 @@
+{% extends 'BackOffice.html.twig' %}
+
+{% block footer %}
+	<div class="container mt-5">
+		<div class="text-center">
+			<h1 class="font-weight-bold">&#x1F506; Ajouter Matiere &#x1F506;</h1>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+                {{ form_start(AjouterMatiere, {'attr': {'class': 'my-form'}}) }}
+                
+                <div class="form-group">
+                    {{ form_label(AjouterMatiere.nom_mat, 'Nom de la Matière', {'label_attr': {'class': 'font-weight-bold'}}) }}
+                    {{ form_widget(AjouterMatiere.nom_mat, {'attr': {'class': 'form-control', 'placeholder': 'Entrez le nom de la matière'}}) }}
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Ajouter</button>
+                </div>
+                
+                {{ form_end(AjouterMatiere) }}
+				</div>
+			</div>
+
+			<div class="text-center mt-4">
+				<a href="{{ path('app_affback') }}" class="btn btn-outline-primary">Retour au menu des matières</a>
+			</div>
+		</div>
+	{% endblock %}
